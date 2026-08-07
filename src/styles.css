@@ -1,3 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import 'tailwindcss';
+
+@media print {
+  body {
+    background-color: white !important;
+    color: black !important;
+    font-family: 'Inter', sans-serif !important;
+  }
+
+  /* Hide the rest of the application layout during print */
+  body * {
+    visibility: hidden;
+  }
+
+  /* Show only the print-section and its descendants */
+  #print-section, #print-section * {
+    visibility: visible;
+  }
+
+  #print-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: white !important;
+    color: black !important;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remove default margin box formatting */
+  @page {
+    margin: 1.5cm;
+  }
+}
+
+/* Hide print preview section on screen */
+@media screen {
+  #print-section {
+    display: none !important;
+  }
+}
