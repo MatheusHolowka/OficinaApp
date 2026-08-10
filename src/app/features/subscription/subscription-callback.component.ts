@@ -2,6 +2,7 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-subscription-callback',
@@ -89,7 +90,7 @@ export class SubscriptionCallbackComponent implements OnInit {
 
     const token = this.authService.getToken();
 
-    this.http.post<any>('http://localhost:3000/billing/verify', {}, {
+    this.http.post<any>(`${environment.apiUrl}/billing/verify`, {}, {
       headers: {
         'Authorization': `Bearer ${token}`
       }

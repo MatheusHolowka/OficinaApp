@@ -2,6 +2,7 @@ import { Component, OnInit, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { DatePipe } from '@angular/common';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-checklists',
@@ -253,8 +254,8 @@ import { DatePipe } from '@angular/common';
 })
 export class ChecklistsComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  private readonly checklistsUrl = 'http://localhost:3000/checklists';
-  private readonly vehiclesUrl = 'http://localhost:3000/vehicles';
+  private readonly checklistsUrl = `${environment.apiUrl}/checklists`;
+  private readonly vehiclesUrl = `${environment.apiUrl}/vehicles`;
 
   readonly checklists = signal<any[]>([]);
   readonly filteredChecklists = signal<any[]>([]);

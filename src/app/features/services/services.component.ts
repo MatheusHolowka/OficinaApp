@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-services',
@@ -175,7 +176,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class ServicesComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:3000/services';
+  private readonly apiUrl = `${environment.apiUrl}/services`;
 
   readonly services = signal<any[]>([]);
   readonly filteredServices = signal<any[]>([]);

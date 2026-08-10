@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { forkJoin } from 'rxjs';
 import { DatePipe } from '@angular/common';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 interface SelectedService {
   serviceId: string;
@@ -185,6 +186,7 @@ interface SelectedPart {
                   <select
                     name="vehicleId"
                     [(ngModel)]="formData.vehicleId"
+                    (ngModelChange)="onVehicleChange($event)"
                     required
                     [disabled]="isEditMode() || !formData.customerId"
                     class="w-full px-4 py-2.5 bg-slate-950 border border-slate-800 rounded-lg text-slate-100 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition text-sm disabled:opacity-50"
@@ -557,7 +559,7 @@ interface SelectedPart {
 })
 export class WorkOrdersComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  private readonly apiUrl = 'http://localhost:3000';
+  private readonly apiUrl = environment.apiUrl;
   readonly authService = inject(AuthService);
 
   readonly workOrders = signal<any[]>([]);
@@ -598,9 +600,11 @@ export class WorkOrdersComponent implements OnInit {
     parts: [] as SelectedPart[],
   };
 
+  readonly selectedVehicleId = signal<string>('');
+
   // Reactive dropdown lists
   readonly customerChecklists = computed(() => {
-    const vehId = this.formData.vehicleId;
+    const vehId = this.selectedVehicleId();
     if (!vehId) return [];
     return this.checklists().filter((c) => c.vehicleId === vehId);
   });
@@ -689,8 +693,14 @@ export class WorkOrdersComponent implements OnInit {
     if (this.formData.vehicleId && !filtered.some((v) => v.id === this.formData.vehicleId)) {
       this.formData.vehicleId = '';
     }
+    this.selectedVehicleId.set(this.formData.vehicleId);
     
     // Reseta checklist se veículo resetar ou se o novo checklist não for compatível
+    this.formData.checklistId = '';
+  }
+
+  onVehicleChange(vehId: string): void {
+    this.selectedVehicleId.set(vehId);
     this.formData.checklistId = '';
   }
 
@@ -717,6 +727,7 @@ export class WorkOrdersComponent implements OnInit {
           quantity: p.quantity,
         })),
       };
+      this.selectedVehicleId.set(wo.vehicleId);
     } else {
       this.isEditMode.set(false);
       this.customerVehicles.set([]);
@@ -729,6 +740,7 @@ export class WorkOrdersComponent implements OnInit {
         services: [],
         parts: [],
       };
+      this.selectedVehicleId.set('');
     }
     this.errorMessage.set(null);
     this.showModal.set(true);

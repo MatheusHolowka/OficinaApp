@@ -2,6 +2,7 @@ import { Component, inject, signal, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../../core/services/auth.service';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-subscription',
@@ -144,7 +145,7 @@ export class SubscriptionComponent implements OnInit {
     this.errorMessage.set(null);
 
     const token = this.authService.getToken();
-    this.http.post<any>('http://localhost:3000/billing/checkout', {}, {
+    this.http.post<any>(`${environment.apiUrl}/billing/checkout`, {}, {
       headers: {
         'Authorization': `Bearer ${token}`
       }

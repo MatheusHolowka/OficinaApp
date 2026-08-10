@@ -1,6 +1,7 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-vehicles',
@@ -208,8 +209,8 @@ import { FormsModule } from '@angular/forms';
 })
 export class VehiclesComponent implements OnInit {
   private readonly http = inject(HttpClient);
-  private readonly vehiclesUrl = 'http://localhost:3000/vehicles';
-  private readonly customersUrl = 'http://localhost:3000/customers';
+  private readonly vehiclesUrl = `${environment.apiUrl}/vehicles`;
+  private readonly customersUrl = `${environment.apiUrl}/customers`;
 
   readonly vehicles = signal<any[]>([]);
   readonly filteredVehicles = signal<any[]>([]);
