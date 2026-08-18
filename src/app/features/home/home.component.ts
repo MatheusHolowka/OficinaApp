@@ -21,10 +21,10 @@ import { AuthService } from '../../core/services/auth.service';
         <div class="max-w-7xl mx-auto flex items-center justify-between">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-2xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center font-black text-white shadow-xl shadow-purple-500/20 tracking-tighter">
-              G
+              O
             </div>
             <div>
-              <span class="text-xl font-black tracking-tight text-white bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text">Gandalf</span>
+              <span class="text-xl font-black tracking-tight text-white bg-gradient-to-r from-white via-slate-100 to-slate-300 bg-clip-text">OficinaFlow</span>
               <span class="text-[9px] text-purple-400 block -mt-1 font-bold uppercase tracking-widest">SaaS de Oficina</span>
             </div>
           </div>
@@ -95,7 +95,7 @@ import { AuthService } from '../../core/services/auth.service';
         </h1>
 
         <p class="text-slate-400 text-lg md:text-xl mt-8 max-w-3xl mx-auto leading-relaxed font-medium">
-          Diga adeus ao papel, às pranchetas sujas de graxa e às fotos perdidas no WhatsApp. O Gandalf centraliza vistorias interativas, orçamentos rápidos e o acompanhamento de Ordens de Serviço.
+          Diga adeus ao papel, às pranchetas sujas de graxa e às fotos perdidas no WhatsApp. O OficinaFlow centraliza vistorias interativas, orçamentos rápidos e o acompanhamento de Ordens de Serviço.
         </p>
 
         <div class="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4 max-w-md mx-auto">
@@ -125,7 +125,7 @@ import { AuthService } from '../../core/services/auth.service';
               <span class="w-3.5 h-3.5 rounded-full bg-red-500/60"></span>
               <span class="w-3.5 h-3.5 rounded-full bg-yellow-500/60"></span>
               <span class="w-3.5 h-3.5 rounded-full bg-green-500/60"></span>
-              <span class="text-xs font-semibold text-slate-500 ml-2 font-mono bg-slate-950 px-3 py-1 rounded-full border border-slate-900">gandalf.com/painel/workspace</span>
+              <span class="text-xs font-semibold text-slate-500 ml-2 font-mono bg-slate-950 px-3 py-1 rounded-full border border-slate-900">oficinaflow.tech/painel/workspace</span>
             </div>
             
             <!-- Showcase Switch Tabs -->
@@ -408,7 +408,7 @@ import { AuthService } from '../../core/services/auth.service';
             <span class="text-xs text-blue-400 font-bold uppercase tracking-widest bg-blue-500/10 px-3 py-1 rounded-full border border-blue-500/20">FLUXO DO SOFTWARE</span>
             <h2 class="text-4xl font-extrabold text-white mt-4 tracking-tight">O Caminho do Veículo sem Papel</h2>
             <p class="text-slate-400 text-base mt-4 max-w-2xl mx-auto">
-              Veja como o Gandalf transforma e acelera a rotina da sua recepção até o pátio de manutenção.
+              Veja como o OficinaFlow transforma e acelera a rotina da sua recepção até o pátio de manutenção.
             </p>
           </div>
 
@@ -664,14 +664,14 @@ import { AuthService } from '../../core/services/auth.service';
         <div class="text-center mb-20">
           <span class="text-xs text-purple-400 font-bold uppercase tracking-widest bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20">DÚVIDAS COMUNS</span>
           <h2 class="text-4xl font-extrabold text-white mt-4 tracking-tight">Perguntas Frequentes</h2>
-          <p class="text-slate-400 mt-4">Esclareça suas principais dúvidas operacionais e comerciais sobre o Gandalf.</p>
+          <p class="text-slate-400 mt-4">Esclareça suas principais dúvidas operacionais e comerciais sobre o OficinaFlow.</p>
         </div>
 
         <div class="space-y-4">
           <!-- Question 1 -->
           <div class="p-6 rounded-2xl bg-slate-900/10 border border-slate-900 hover:border-purple-500/20 transition-all duration-300">
             <h3 class="text-base font-extrabold text-white flex justify-between items-center cursor-pointer select-none" (click)="toggleFaq(1)">
-              <span>O que é a arquitetura SaaS multitenant do Gandalf?</span>
+              <span>O que é a arquitetura SaaS multitenant do OficinaFlow?</span>
               <span class="text-purple-400 font-mono text-xl transition-transform duration-300" [style.transform]="activeFaq() === 1 ? 'rotate(45deg)' : 'none'">+</span>
             </h3>
             @if (activeFaq() === 1) {
@@ -727,16 +727,16 @@ import { AuthService } from '../../core/services/auth.service';
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8">
           <div class="flex items-center gap-3">
             <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 flex items-center justify-center font-bold text-white shadow-md shadow-purple-500/20">
-              G
+              O
             </div>
             <div>
-              <span class="text-base font-black text-white tracking-tight">Gandalf</span>
+              <span class="text-base font-black text-white tracking-tight">OficinaFlow</span>
               <span class="text-[9px] text-slate-500 block -mt-1 uppercase tracking-widest">SaaS Solutions</span>
             </div>
           </div>
 
           <p class="text-xs text-slate-500 font-mono text-center md:text-left">
-            &copy; 2026 Gandalf. Desenvolvido para Centros Automotivos de Elite. Todos os direitos reservados.
+            &copy; 2026 OficinaFlow. Desenvolvido para Centros Automotivos de Elite. Todos os direitos reservados.
           </p>
 
           <div class="flex items-center gap-6 text-xs font-semibold text-slate-400">

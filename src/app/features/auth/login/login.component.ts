@@ -17,9 +17,9 @@ import { AuthService } from '../../../core/services/auth.service';
         <!-- Logo/Header -->
         <div class="text-center mb-8">
           <div class="inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 shadow-lg shadow-purple-500/20 mb-3">
-            <span class="text-2xl font-bold tracking-wider text-white">G</span>
+            <span class="text-2xl font-bold tracking-wider text-white">O</span>
           </div>
-          <h2 class="text-2xl font-bold text-white tracking-tight">Entrar no Gandalf</h2>
+          <h2 class="text-2xl font-bold text-white tracking-tight">Entrar no OficinaFlow</h2>
           <p class="text-slate-400 text-sm mt-2">Gestão inteligente para sua oficina mecânica</p>
         </div>
 

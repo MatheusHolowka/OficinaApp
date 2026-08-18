@@ -12,7 +12,7 @@ export class AuthService {
   private readonly router = inject(Router);
   private readonly apiUrl = environment.apiUrl;
 
-  private readonly tokenKey = 'gandalf_auth_token';
+  private readonly tokenKey = 'oficinaflow_auth_token';
 
   // Signals
   readonly currentUser = signal<any | null>(null);

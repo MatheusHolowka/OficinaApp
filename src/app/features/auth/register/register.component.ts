@@ -18,7 +18,7 @@ import { AuthService } from '../../../core/services/auth.service';
         <!-- Logo/Header -->
         <div class="text-center mb-6">
           <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gradient-to-tr from-purple-600 to-blue-500 shadow-lg shadow-purple-500/20 mb-2">
-            <span class="text-xl font-bold tracking-wider text-white">G</span>
+            <span class="text-xl font-bold tracking-wider text-white">O</span>
           </div>
           <h2 class="text-xl font-bold text-white tracking-tight">Criar Conta da Oficina</h2>
           <p class="text-slate-400 text-xs mt-1">Conclua o seu cadastro e inicie no gerenciamento digital</p>
@@ -59,7 +59,7 @@ import { AuthService } from '../../../core/services/auth.service';
                   class="w-full px-3.5 py-2.5 bg-slate-950/80 border border-slate-800 rounded-xl text-slate-100 placeholder-slate-500 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition text-xs font-mono"
                   placeholder="oficina-precision"
                 />
-                <span class="text-[10px] text-slate-500 mt-1 block">Link de acesso: gandalf.com/{{ tenantSlug || 'sua-oficina' }}</span>
+                <span class="text-[10px] text-slate-500 mt-1 block">Link de acesso: oficinaflow.tech/{{ tenantSlug || 'sua-oficina' }}</span>
               </div>
             </div>
           </div>
